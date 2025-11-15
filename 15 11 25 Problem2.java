@@ -22,7 +22,7 @@ class MarksCheck {
             int c = Integer.parseInt(m3);
 
             if (a < 0 || a > 100 || b < 0 || b > 100 || c < 0 || c > 100)
-                throw new ArithmeticException("Error: Marks must be between 0 and 100.");
+                throw new ArithmeticException();
 
             int total = a + b + c;
             double avg = total / 3.0;
@@ -36,13 +36,13 @@ class MarksCheck {
                 System.out.println("Result: FAIL");
         }
         catch(NumberFormatException e) {
-            System.out.println("Error: Please enter valid numeric marks.");
+            System.out.println("Error caught: " + e);
         }
         catch(ArithmeticException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error caught: " + e);
         }
         catch(NullPointerException e) {
-            System.out.println("Error: All three marks must be entered.");
+            System.out.println("Error caught: " + e);
         }
     }
 }
