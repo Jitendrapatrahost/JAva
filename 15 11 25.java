@@ -15,10 +15,10 @@ class Bank {
             int withdraw = Integer.parseInt(wInput);
 
             if (withdraw > balance)
-                throw new ArithmeticException("Error: Insufficient Balance");
+                throw new ArithmeticException();
 
             if (withdraw <= 0)
-                throw new Exception("Error: Withdrawal amount must be greater than zero");
+                throw new Exception();
 
             balance = balance - withdraw;
 
@@ -27,13 +27,13 @@ class Bank {
             System.out.println("Remaining Balance: " + balance);
         }
         catch(NumberFormatException e) {
-            System.out.println("Error: Please enter only numbers.");
+            System.out.println("Error caught: " + e);
         }
         catch(ArithmeticException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error caught: " + e);
         }
         catch(Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error caught: " + e);
         }
     }
 }
