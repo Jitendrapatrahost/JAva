@@ -8,7 +8,7 @@ public class AWTDemo {
 		f.setLayout(new FlowLayout());
 		
 		//1. Label
-		Label lbleName = new Label("Enter NAme: ");
+		Label lblName = new Label("Enter Name: ");
 		f.add(lblName);
 		
 		//2. TextField (Text Box)
@@ -30,3 +30,18 @@ public class AWTDemo {
 		Checkbox cbPython = new Checkbox("Python");
 		f.add(cdJava);
 		f.add(cbPython);
+		
+		//5. Radio Buttons using CheckboxGroup
+		Label lblGender = new Label("Gender: ");
+		f.add(lblGender);
+		
+		CheckboxGroup genderGroup = new CheckboxGroup();
+		Checkbox rbMale = new Checkbox("Male", genderGroup, false);
+		Checkbox rbFemale = new Checkbox("Female", genderGroup, false);
+		
+		f.add(rbMale);
+		f.add(rbFemale);
+		
+		//6. Button
+		Button btnSubmit = new Button("Submit");
+		f.add(btnSubmit);
